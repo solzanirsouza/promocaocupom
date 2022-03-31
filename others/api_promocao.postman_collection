@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "2d830fbe-4736-4f47-a0b8-06a0a5853b6a",
+		"name": "Teste Infra AWS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "consultar Cliente",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/api/publico/v1/usuario/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"publico",
+						"v1",
+						"usuario",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "salvar Cliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\":\"Solzanir\",\r\n    \"email\":\"solzanir@teste.com.br\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/api/publico/v1/usuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"publico",
+						"v1",
+						"usuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "salvar cupom",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_usuario\": 1,\r\n    \"cupom\": \"ABC-123-DEF-456\",\r\n    \"valor\": 15.95\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084/api/publico/v1/cupom",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"api",
+						"publico",
+						"v1",
+						"cupom"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "salvar cupom com pontos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_usuario\": 1,\r\n    \"cupom\": \"ABC-123-DEF-456\",\r\n    \"valor\": 15.95,\r\n    \"pontos\": 15\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084/api/publico/v1/cupom/pontos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"api",
+						"publico",
+						"v1",
+						"cupom",
+						"pontos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
