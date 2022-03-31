@@ -34,5 +34,3 @@ cloud:
     credentials:
       access-key: <ACCESS-KEY>
       secret-key: <SECRET-KEY>
-    end-point:
-      uri: <QUEUE-URL>
